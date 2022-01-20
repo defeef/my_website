@@ -7,7 +7,7 @@ $config = array();
 $config['app_key'] = 'adabbg';
 
 // a secret key to be used during encryption
-$config['encryption_key'] = 'asdggjhgkyjhtevsffnrnygjhtesyt,ilfid';
+$config['encryption_key'] = 'asdggjhgkyjhtevsffnrnygjhtesytilfid';
 
 // URL running the proxy app
 //$config['app_url'] = 'https://www.mysampleproxy.com/proxyfolder/';
