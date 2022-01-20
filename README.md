@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/defeef/my_website/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<center>
+  
+![](https://img.shields.io/packagist/dt/Athlon1600/php-proxy-app.svg) ![](https://img.shields.io/github/last-commit/Athlon1600/php-proxy-app.svg) ![](https://img.shields.io/github/license/Athlon1600/php-proxy-app.svg)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+</center>
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# php-proxy-app
 
-```markdown
-Syntax highlighted code block
+Web Proxy Application built on [**php-proxy library**](https://github.com/Athlon1600/php-proxy) ready to be installed on your server
 
-# Header 1
-## Header 2
-### Header 3
+![alt text](http://i.imgur.com/KrtU5KE.png?1 "This is how PHP-Proxy looks when installed")
 
-- Bulleted
-- List
+## To Do List
 
-1. Numbered
-2. List
+As of **March 25**, 2018:
 
-**Bold** and _Italic_ and `Code` text
+* Plugin for facebook.com  
+* Plugin for dailymotion.com
+* Better support/documentation for Plugin Development
+* Better Javascript support
 
-[Link](url) and ![Image](src)
+## Web-Proxy vs Proxy Server
+
+Keep in mind that sites/pages that are too script-heavy or with too many "dynamic parts", may not work with this proxy script.
+That is a known limitation of web proxies. For such sites, you should use an actual proxy server to route your browser's HTTP requests through:  
+
+https://www.proxynova.com/proxy-software/
+
+
+## Installation
+
+Keep in mind that this is a **project** and not a library. Installing this via *require* would do you not good.
+A project such as this, should be installed straight into the public directory of your web server.
+
+```bash
+composer create-project athlon1600/php-proxy-app:dev-master /var/www/
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+If you do not have composer or trying to host this application on either a **shared hosting**, or a VPS hosting with limited permissions (dreamhost.com), then download a pre-installed version of this app as a ZIP archive from [**www.php-proxy.com**](https://www.php-proxy.com/).
 
-### Jekyll Themes
+**Direct Link:**  
+https://www.php-proxy.com/download/php-proxy.zip
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/defeef/my_website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Keep it up-to-date
 
-### Support or Contact
+Application itself rarely will change, vast majority of changes will be done to its requirement packages like php-proxy. Simply call this command once in a while to make sure your proxy is always using the latest versions.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+composer update
+```
+
+#### config.php
+
+This file will be loaded into the global Config class.
+
+#### /templates/
+
+This should have been named "views", but for historic purposes we keep it named as templates for now.
+
+#### /plugins/
+
+PHP-Proxy provides many of its own native plugins, but users are free to write their own custom plugins, which could then be automatically loaded from this very folder. See /plugins/TestPlugin.php for an example.
