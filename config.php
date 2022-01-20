@@ -4,10 +4,10 @@
 $config = array();
 
 // a unique key that identifies this application - DO NOT LEAVE THIS EMPTY!
-$config['app_key'] = '';
+$config['app_key'] = 'adabbg';
 
 // a secret key to be used during encryption
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'asdggjhgkyjhtevsffnrnygjhtesyt,ilfid';
 
 // URL running the proxy app
 //$config['app_url'] = 'https://www.mysampleproxy.com/proxyfolder/';
@@ -31,14 +31,7 @@ $config['plugins'] = array(
 	'Proxify',
 	'UrlForm',
 	// site specific plugins below
-	'Youtube',
-	'DailyMotion',
-	'RedTube',
-	'XHamster',
-	'XVideos',
-	'Xnxx',
-	'Pornhub',
-	'Twitter'
+	'Youtube'
 );
 
 // additional curl options to go with each request
